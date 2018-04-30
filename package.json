@@ -13,13 +13,20 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.71.0",
     "jest": "^22.4.3",
     "node-sass": "^4.9.0",
     "prettier": "^1.12.1"
   },
   "dependencies": {
+    "bulma": "^0.7.1",
+    "classnames": "^2.2.5",
+    "javascript-state-machine": "^3.0.1",
     "mithril": "^1.1.6"
   }
 }

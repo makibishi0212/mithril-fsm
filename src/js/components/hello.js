@@ -1,4 +1,5 @@
 import m from "mithril";
+import c from "classnames";
 
 export default {
   oninit: () => {
@@ -6,15 +7,17 @@ export default {
   },
   view: () => {
     return [
-      m("h1", "Hello Page"),
-      m(
-        "a",
-        {
-          oncreate: m.route.link,
-          href: "/about"
-        },
-        "About"
-      )
+      m('div.container', [
+        m("h1.title.is-1", "Hello Page"),
+        m(
+          "a.button.is-success",
+          {
+            oncreate: m.route.link,
+            href: "/register"
+          },
+          "Register"
+        )
+      ])
     ];
   }
 };

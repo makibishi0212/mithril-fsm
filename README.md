@@ -1,33 +1,5 @@
-# mithril-parcel
+# mithril-fsm
 
-A minimal mithril-parcel starter
+mithril-SPA with finite state machine
 
-## Included
-+ Formatting with prettier
-+ Testing with jest
-
-## Getting Started
-```
-git clone https://github.com/makibishi0212/mithril-parcel.git {app-name}
-
-cd {app-name}
-
-npm install
-```
-
-## Usage
-
-### develop
-```
-npm start
-```
-
-### test
-```
-npm run test
-```
-
-### format
-```
-npm run format
-```
+write later

@@ -1,15 +1,11 @@
 $baseColor: #fff;
 
 body {
-  background: $baseColor;
-
-  h1 {
-    margin: 0;
-    padding: 0;
-    color: #000;
-    text-align: center;
+  .register {
+    padding: 1.25rem;
+    margin-top: 1rem;
+    border: solid 1px #a0a0a0;
   }
-
   .ninja {
     width: 400px;
     height: 374px;
