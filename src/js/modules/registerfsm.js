@@ -37,36 +37,46 @@ export default class registerFSM {
   });
 
   // アプリが持つプロパティを定義
-  username = null;
-  password = null;
-  bloodtype = null;
-  age = null;
-  sex = null;
+  username:string = null;
+  password:string = null;
+  bloodtype: Symbol = null;
+  age: number = null;
+  sex: Symbol = null;
 
   constructor() {
 
     console.log(this._stateMachine.state);
-    /*
-    this._stateMachine.melt();
-    console.log(this._stateMachine.state);
-    this.stateMachine.vaporize();
-    console.log(this._stateMachine.state);
-    */
   }
 
   // ステートの遷移時に前のステートから値を受け取る
   movePasswordInput = (username: string) => {
     this._stateMachine.movePasswordInput();
+
     this.username = username;
   }
 
   movePersonalInfoInput = (password: string) => {
     this._stateMachine.movePersonalInfoInput();
+
     this.password = password;
   }
 
-  moveSuccess = (bloodtype: string, age: number, sex: number) => {
-    
+  moveSuccess = (bloodtype: string, age: Symbol, sex: Symbol) => {
+    this._stateMachine.moveSuccess();
+
+    this.bloodtype = bloodtype;
+    this.age = age;
+    this.sex = sex;
+  }
+
+  resetInput = () => {
+    this._stateMachine.resetInput();
+
+    this.username = null;
+    this.password = null;
+    this.bloodtype = null;
+    this.age = null;
+    this.sex = null;
   }
 
   state = () => {

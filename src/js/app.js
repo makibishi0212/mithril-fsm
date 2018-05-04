@@ -4,12 +4,12 @@ import add from "./modules/add";
 import registerFSM from "./modules/registerfsm";
 import m from "mithril";
 
-import Hello from "./components/hello";
-import Register from "./components/register";
+import Hello from "./pages/hello";
+import Register from "./pages/register";
 
 const fsm = new registerFSM();
 
 m.route(document.querySelector(".mithril-body"), "/", {
-  "/": Hello,
+  "/": new Hello(),
   "/register": new Register(fsm)
 });
