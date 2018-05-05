@@ -19,8 +19,6 @@ export default class Register {
     this.fsm = registerFSM;
   }
   oninit = () => {
-    console.log("hello world");
-
     this.usernameInput = new UsernameInput(this.fsm);
     this.passwordInput = new PasswordInput(this.fsm);
     this.personalInput = new PersonalInput(this.fsm);
@@ -47,15 +45,19 @@ export default class Register {
           null,
 
           (this.fsm.state() === 'INPUT_PASSWORD') ? 
-          m(this.usernameInput)
+          m(this.passwordInput)
           :
           null,
 
           (this.fsm.state() === 'INPUT_PERSONAL') ? 
-          m(this.usernameInput)
+          m(this.personalInput)
           :
           null,
 
+          (this.fsm.state() === 'REGISTER_SUCCESS') ?
+          m("h2.title.is-2", "Thank you for registering!")
+          :
+          null
         ])
       ])
     ];

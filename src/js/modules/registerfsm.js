@@ -25,7 +25,7 @@ export default class registerFSM {
         // +bloodtype +age +sex
         name: "moveSuccess",
         from: "INPUT_PERSONAL",
-        to: "INPUT_SUCCESS"
+        to: "REGISTER_SUCCESS"
       },
       {
         // -all
@@ -53,6 +53,8 @@ export default class registerFSM {
     this._stateMachine.movePasswordInput();
 
     this.username = username;
+
+    console.log(this._stateMachine.state);
   }
 
   movePersonalInfoInput = (password: string) => {
@@ -61,7 +63,7 @@ export default class registerFSM {
     this.password = password;
   }
 
-  moveSuccess = (bloodtype: string, age: Symbol, sex: Symbol) => {
+  moveSuccess = (age: number, bloodtype: Symbol, sex: Symbol) => {
     this._stateMachine.moveSuccess();
 
     this.bloodtype = bloodtype;
