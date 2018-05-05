@@ -45,7 +45,6 @@ export default class registerFSM {
 
   constructor() {
 
-    console.log(this._stateMachine.state);
   }
 
   // ステートの遷移時に前のステートから値を受け取る
@@ -53,8 +52,6 @@ export default class registerFSM {
     this._stateMachine.movePasswordInput();
 
     this.username = username;
-
-    console.log(this._stateMachine.state);
   }
 
   movePersonalInfoInput = (password: string) => {

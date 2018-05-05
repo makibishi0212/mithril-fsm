@@ -24,7 +24,6 @@ export default class UsernameInput {
                     value: this.username,
                     oninput: m.withAttr('value', (value) => {
                         this.username = value;
-                        console.log(this.username);
                     })
                 }),
 

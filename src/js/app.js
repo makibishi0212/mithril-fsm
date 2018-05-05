@@ -9,7 +9,7 @@ import Register from "./pages/register";
 
 const fsm = new registerFSM();
 
-m.route(document.querySelector(".mithril-body"), "/", {
+m.route(document.querySelector(".mithril-body"), "/register", {
   "/": new Hello(),
   "/register": new Register(fsm)
 });

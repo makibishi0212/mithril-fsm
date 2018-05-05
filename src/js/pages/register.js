@@ -28,14 +28,6 @@ export default class Register {
     return [
       m('div.container', [
         m("h1.title.is-1", "Register Page"),
-        m(
-          "a.button.is-link",
-          {
-            oncreate: m.route.link,
-            href: "/"
-          },
-          "Home"
-        ),
         m('div.register', [
           m("h3.title.is-3", "New Register"),
 

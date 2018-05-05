@@ -79,7 +79,7 @@ export default class PersonalInput {
                 ]),
             ]),
 
-            m('label.label', 'username'),
+            m('label.label', 'age'),
             m('div.control', [
                 m('input.input', {
                     type: 'text', 
@@ -87,7 +87,6 @@ export default class PersonalInput {
                     value: this.age,
                     oninput: m.withAttr('value', (value) => {
                         this.age = value;
-                        console.log(this.age);
                     })
                 }),
             ])
@@ -95,7 +94,7 @@ export default class PersonalInput {
         m('div.field.is-grouped', [
             m('div.control', [
                 m('button.button.is-link', {
-                    disabled: (this.age && isNaN(this.age)) ? false : true,
+                    disabled: (this.age && !isNaN(this.age)) ? false : true,
                     onclick: () => {
                         this.fsm.moveSuccess(this.age, this.blood, this.sex)
                     }
