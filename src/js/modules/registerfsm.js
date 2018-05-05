@@ -37,11 +37,11 @@ export default class registerFSM {
   });
 
   // アプリが持つプロパティを定義
-  username:string = null;
-  password:string = null;
-  bloodtype: String = null;
-  age: number = null;
-  sex: String = null;
+  _username: string = null;
+  _password: string = null;
+  _bloodtype: string = null;
+  _age: number = null;
+  _sex: string = null;
 
   constructor() {
 
@@ -51,34 +51,54 @@ export default class registerFSM {
   movePasswordInput = (username: string) => {
     this._stateMachine.movePasswordInput();
 
-    this.username = username;
+    this._username = username;
   }
 
   movePersonalInfoInput = (password: string) => {
     this._stateMachine.movePersonalInfoInput();
 
-    this.password = password;
+    this._password = password;
   }
 
   moveSuccess = (age: number, bloodtype: Symbol, sex: Symbol) => {
     this._stateMachine.moveSuccess();
 
-    this.bloodtype = bloodtype;
-    this.age = age;
-    this.sex = sex;
+    this._bloodtype = bloodtype;
+    this._age = age;
+    this._sex = sex;
   }
 
   resetInput = () => {
     this._stateMachine.resetInput();
 
-    this.username = null;
-    this.password = null;
-    this.bloodtype = null;
-    this.age = null;
-    this.sex = null;
+    this._username = null;
+    this._password = null;
+    this._bloodtype = null;
+    this._age = null;
+    this._sex = null;
   }
 
   state = () => {
     return this._stateMachine.state;
+  }
+
+  get username() {
+    return this._username;
+  }
+
+  get password() {
+    return this._password;
+  }
+
+  get bloodtype() {
+    return this._bloodtype;
+  }
+
+  get age() {
+    return this._age;
+  }
+
+  get sex() {
+    return this._sex;
   }
 }

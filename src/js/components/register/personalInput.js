@@ -17,6 +17,10 @@ export default class PersonalInput {
   constructor(registerFSM: registerFSM) {
     this.fsm = registerFSM;
 
+    this.resetProp();
+  }
+
+  resetProp = () => {
     this.age = null;
     this.sex = SEX.MAN;
     this.blood = BLOOD.A;
@@ -96,7 +100,7 @@ export default class PersonalInput {
                 m('button.button.is-link', {
                     disabled: (this.age && !isNaN(this.age)) ? false : true,
                     onclick: () => {
-                        this.fsm.moveSuccess(this.age, this.blood, this.sex)
+                        this.fsm.moveSuccess(this.age, this.blood, this.sex);
                     }
                 }, 'Next')
             ]),
@@ -104,6 +108,7 @@ export default class PersonalInput {
                 m('button.button.is-text', {
                     onclick: () => {
                         this.fsm.resetInput();
+                        this.resetProp();
                     }
                 }, 'Cancel')
             ])

@@ -2,4 +2,4 @@
 
 mithril-SPA with finite state machine
 
-write later
+https://makibishi0212.github.io/mithril-fsm/
