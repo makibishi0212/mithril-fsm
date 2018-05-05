@@ -6,6 +6,7 @@ import registerFSM from "../modules/registerfsm";
 import UsernameInput from "../components/register/usernameInput";
 import PasswordInput from "../components/register/passwordInput";
 import PersonalInput from "../components/register/personalInput";
+import RegisterSuccess from "../components/register/registersuccess";
 
 export default class Register {
 
@@ -14,6 +15,8 @@ export default class Register {
   usernameInput: UsernameInput;
   passwordInput: PasswordInput;
   personalInput: PersonalInput;
+  registerSuccess: RegisterSuccess;
+
 
   constructor(registerFSM: registerFSM) {
     this.fsm = registerFSM;
@@ -22,6 +25,7 @@ export default class Register {
     this.usernameInput = new UsernameInput(this.fsm);
     this.passwordInput = new PasswordInput(this.fsm);
     this.personalInput = new PersonalInput(this.fsm);
+    this.registerSuccess = new RegisterSuccess(this.fsm);
   };
 
   view = () => {
@@ -47,7 +51,7 @@ export default class Register {
           null,
 
           (this.fsm.state() === 'REGISTER_SUCCESS') ?
-          m("h2.title.is-2", "Thank you for registering!")
+          m(this.registerSuccess)
           :
           null
         ])

@@ -39,9 +39,9 @@ export default class registerFSM {
   // アプリが持つプロパティを定義
   username:string = null;
   password:string = null;
-  bloodtype: Symbol = null;
+  bloodtype: String = null;
   age: number = null;
-  sex: Symbol = null;
+  sex: String = null;
 
   constructor() {
 

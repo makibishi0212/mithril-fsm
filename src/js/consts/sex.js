@@ -1,6 +1,6 @@
 const SEX = {
-    MAN: Symbol(),
-    WOMAN: Symbol(),
+    MAN: 'MAN',
+    WOMAN: 'WOMAN',
 };
 
 export default SEX;

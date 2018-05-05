@@ -10,8 +10,8 @@ export default class PersonalInput {
 
   fsm: registerFSM;
 
-  sex: Symbol;
-  blood: Symbol;
+  sex: String;
+  blood: String;
   age: number;
 
   constructor(registerFSM: registerFSM) {
@@ -101,7 +101,11 @@ export default class PersonalInput {
                 }, 'Next')
             ]),
             m('div.control', [
-                m('button.button.is-text', 'Cancel')
+                m('button.button.is-text', {
+                    onclick: () => {
+                        this.fsm.resetInput();
+                    }
+                }, 'Cancel')
             ])
         ])
     ]

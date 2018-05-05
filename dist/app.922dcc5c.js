@@ -77,7 +77,7 @@ parcelRequire = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({17:[function(require,module,exports) {
+})({19:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -107,7 +107,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],12:[function(require,module,exports) {
+},{}],9:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -138,19 +138,19 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":17}],4:[function(require,module,exports) {
+},{"./bundle-url":19}],3:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./../images/ninja_kaginawa.png":[["ninja_kaginawa.6b24ed0c.png",13],13],"_css_loader":12}],10:[function(require,module,exports) {
+},{"./../images/ninja_kaginawa.png":[["ninja_kaginawa.6b24ed0c.png",10],10],"_css_loader":9}],8:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":12}],5:[function(require,module,exports) {
+},{"_css_loader":9}],4:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -160,7 +160,7 @@ exports.default = add;
 function add(number1, number2) {
   return number1 + number2;
 }
-},{}],18:[function(require,module,exports) {
+},{}],20:[function(require,module,exports) {
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -830,33 +830,33 @@ module.exports = function(message, transition, from, to, current) {
 /***/ })
 /******/ ]);
 });
-},{}],14:[function(require,module,exports) {
-"use strict";
+},{}],17:[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 var BLOOD = {
-    A: Symbol(),
-    B: Symbol(),
-    O: Symbol(),
-    AB: Symbol()
+    A: 'A',
+    B: 'B',
+    O: 'O',
+    AB: 'AB'
 };
 
 exports.default = BLOOD;
-},{}],15:[function(require,module,exports) {
-"use strict";
+},{}],18:[function(require,module,exports) {
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 var SEX = {
-    MAN: Symbol(),
-    WOMAN: Symbol()
+    MAN: 'MAN',
+    WOMAN: 'WOMAN'
 };
 
 exports.default = SEX;
-},{}],6:[function(require,module,exports) {
+},{}],5:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -958,7 +958,7 @@ function registerFSM() {
 ;
 
 exports.default = registerFSM;
-},{"javascript-state-machine":18,"../consts/bloodtype":14,"../consts/sex":15}],11:[function(require,module,exports) {
+},{"javascript-state-machine":20,"../consts/bloodtype":17,"../consts/sex":18}],11:[function(require,module,exports) {
 var global = (1,eval)("this");
 ;(function() {
 "use strict"
@@ -2267,7 +2267,7 @@ else window.m = m
 	}
 }());
 
-},{}],7:[function(require,module,exports) {
+},{}],6:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2303,7 +2303,7 @@ var Hello = function Hello() {
 
 exports.default = Hello;
 ;
-},{"mithril":11,"classnames":16}],19:[function(require,module,exports) {
+},{"mithril":11,"classnames":16}],12:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2358,7 +2358,7 @@ var _initialiseProps = function _initialiseProps() {
 };
 
 exports.default = UsernameInput;
-},{"mithril":11,"classnames":16,"../../modules/registerfsm":6}],24:[function(require,module,exports) {
+},{"mithril":11,"classnames":16,"../../modules/registerfsm":5}],22:[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {};
@@ -2545,7 +2545,7 @@ process.chdir = function (dir) {
 process.umask = function () {
     return 0;
 };
-},{}],27:[function(require,module,exports) {
+},{}],25:[function(require,module,exports) {
 'use strict'
 
 exports.byteLength = byteLength
@@ -2698,7 +2698,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],28:[function(require,module,exports) {
+},{}],26:[function(require,module,exports) {
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = (nBytes * 8) - mLen - 1
@@ -2784,14 +2784,14 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],26:[function(require,module,exports) {
+},{}],24:[function(require,module,exports) {
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],25:[function(require,module,exports) {
+},{}],23:[function(require,module,exports) {
 
 var global = (1,eval)("this");
 /*!
@@ -4584,7 +4584,7 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-},{"base64-js":27,"ieee754":28,"isarray":26,"buffer":25}],23:[function(require,module,exports) {
+},{"base64-js":25,"ieee754":26,"isarray":24,"buffer":23}],21:[function(require,module,exports) {
 var process = require("process");
 var global = (1,eval)("this");
 var Buffer = require("buffer").Buffer;
@@ -5272,7 +5272,7 @@ var Buffer = require("buffer").Buffer;
   }
 })();
 
-},{"process":24,"buffer":25}],20:[function(require,module,exports) {
+},{"process":22,"buffer":23}],13:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5342,7 +5342,7 @@ var _initialiseProps = function _initialiseProps() {
 };
 
 exports.default = PaswordInput;
-},{"mithril":11,"classnames":16,"js-md5":23,"../../modules/registerfsm":6}],21:[function(require,module,exports) {
+},{"mithril":11,"classnames":16,"js-md5":21,"../../modules/registerfsm":5}],14:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5429,12 +5429,57 @@ var _initialiseProps = function _initialiseProps() {
             onclick: function onclick() {
                 _this.fsm.moveSuccess(_this.age, _this.blood, _this.sex);
             }
-        }, 'Next')]), (0, _mithril2.default)('div.control', [(0, _mithril2.default)('button.button.is-text', 'Cancel')])])];
+        }, 'Next')]), (0, _mithril2.default)('div.control', [(0, _mithril2.default)('button.button.is-text', {
+            onclick: function onclick() {
+                _this.fsm.resetInput();
+            }
+        }, 'Cancel')])])];
     };
 };
 
 exports.default = PersonalInput;
-},{"mithril":11,"classnames":16,"../../consts/bloodtype":14,"../../consts/sex":15,"../../modules/registerfsm":6}],8:[function(require,module,exports) {
+},{"mithril":11,"classnames":16,"../../consts/bloodtype":17,"../../consts/sex":18,"../../modules/registerfsm":5}],29:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _mithril = require("mithril");
+
+var _mithril2 = _interopRequireDefault(_mithril);
+
+var _classnames = require("classnames");
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _registerfsm = require("../../modules/registerfsm");
+
+var _registerfsm2 = _interopRequireDefault(_registerfsm);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var RegisterSuccess = function RegisterSuccess(registerFSM) {
+  _classCallCheck(this, RegisterSuccess);
+
+  _initialiseProps.call(this);
+
+  this.fsm = registerFSM;
+  this.username = '';
+};
+
+var _initialiseProps = function _initialiseProps() {
+  var _this = this;
+
+  this.view = function () {
+    return [(0, _mithril2.default)("h3.title.is-3", "Thank you for registering!"), (0, _mithril2.default)("div.content", [(0, _mithril2.default)('h4', 'Username'), (0, _mithril2.default)('p', _this.fsm.username), (0, _mithril2.default)('h4', 'Age'), (0, _mithril2.default)('p', _this.fsm.age), (0, _mithril2.default)('h4', 'Sex'), (0, _mithril2.default)('p', _this.fsm.sex), (0, _mithril2.default)('h4', 'Blood type'), (0, _mithril2.default)('p', _this.fsm.bloodtype)])];
+  };
+};
+
+exports.default = RegisterSuccess;
+},{"mithril":11,"classnames":16,"../../modules/registerfsm":5}],7:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5465,6 +5510,10 @@ var _personalInput = require("../components/register/personalInput");
 
 var _personalInput2 = _interopRequireDefault(_personalInput);
 
+var _registersuccess = require("../components/register/registersuccess");
+
+var _registersuccess2 = _interopRequireDefault(_registersuccess);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -5484,15 +5533,16 @@ var _initialiseProps = function _initialiseProps() {
     _this.usernameInput = new _usernameInput2.default(_this.fsm);
     _this.passwordInput = new _passwordInput2.default(_this.fsm);
     _this.personalInput = new _personalInput2.default(_this.fsm);
+    _this.registerSuccess = new _registersuccess2.default(_this.fsm);
   };
 
   this.view = function () {
-    return [(0, _mithril2.default)('div.container', [(0, _mithril2.default)("h1.title.is-1", "Register Page"), (0, _mithril2.default)('div.register', [(0, _mithril2.default)("h3.title.is-3", "New Register"), _this.fsm.state() === 'INPUT_USERNAME' ? (0, _mithril2.default)(_this.usernameInput) : null, _this.fsm.state() === 'INPUT_PASSWORD' ? (0, _mithril2.default)(_this.passwordInput) : null, _this.fsm.state() === 'INPUT_PERSONAL' ? (0, _mithril2.default)(_this.personalInput) : null, _this.fsm.state() === 'REGISTER_SUCCESS' ? (0, _mithril2.default)("h2.title.is-2", "Thank you for registering!") : null])])];
+    return [(0, _mithril2.default)('div.container', [(0, _mithril2.default)("h1.title.is-1", "Register Page"), (0, _mithril2.default)('div.register', [(0, _mithril2.default)("h3.title.is-3", "New Register"), _this.fsm.state() === 'INPUT_USERNAME' ? (0, _mithril2.default)(_this.usernameInput) : null, _this.fsm.state() === 'INPUT_PASSWORD' ? (0, _mithril2.default)(_this.passwordInput) : null, _this.fsm.state() === 'INPUT_PERSONAL' ? (0, _mithril2.default)(_this.personalInput) : null, _this.fsm.state() === 'REGISTER_SUCCESS' ? (0, _mithril2.default)(_this.registerSuccess) : null])])];
   };
 };
 
 exports.default = Register;
-},{"mithril":11,"classnames":16,"../modules/registerfsm":6,"../components/register/usernameInput":19,"../components/register/passwordInput":20,"../components/register/personalInput":21}],2:[function(require,module,exports) {
+},{"mithril":11,"classnames":16,"../modules/registerfsm":5,"../components/register/usernameInput":12,"../components/register/passwordInput":13,"../components/register/personalInput":14,"../components/register/registersuccess":29}],2:[function(require,module,exports) {
 "use strict";
 
 require("../scss/style.scss");
@@ -5527,7 +5577,7 @@ _mithril2.default.route(document.querySelector(".mithril-body"), "/register", {
   "/": new _hello2.default(),
   "/register": new _register2.default(fsm)
 });
-},{"../scss/style.scss":4,"bulma":10,"./modules/add":5,"./modules/registerfsm":6,"mithril":11,"./pages/hello":7,"./pages/register":8}],29:[function(require,module,exports) {
+},{"../scss/style.scss":3,"bulma":8,"./modules/add":4,"./modules/registerfsm":5,"mithril":11,"./pages/hello":6,"./pages/register":7}],27:[function(require,module,exports) {
 
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -5557,7 +5607,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '64564' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '60317' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -5696,5 +5746,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[29,2])
+},{}]},{},[27,2])
 //# sourceMappingURL=/app.922dcc5c.map

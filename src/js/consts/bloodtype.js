@@ -1,8 +1,8 @@
 const BLOOD = {
-    A: Symbol(),
-    B: Symbol(),
-    O: Symbol(),
-    AB: Symbol(),
+    A: 'A',
+    B: 'B',
+    O: 'O',
+    AB: 'AB',
 };
 
 export default BLOOD;
